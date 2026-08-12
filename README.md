@@ -7,7 +7,7 @@ The single source of truth is [`renovation.json`](renovation.json). The dashboar
 ## Project structure
 
 ```
-apartment-renovation/
+home/
 ├── renovation.json   # source of truth (do not edit from the dashboard)
 ├── index.html        # markup
 ├── app.js            # logic (fetch, validate, calculate, render)
@@ -62,7 +62,7 @@ There is **no backend** and **no build step**.
 ## Deploy to GitHub Pages
 
 1. Push this folder to a GitHub repository.
-2. In **Settings → Pages**, choose the branch and `/apartment-renovation`
+2. In **Settings → Pages**, choose the branch and `/home`
    folder (or repo root if you push the contents there).
 3. The dashboard uses only relative paths, so it works as-is — no architectural
    changes needed.
