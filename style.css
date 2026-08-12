@@ -102,6 +102,7 @@ h3 { font-size: 0.95rem; }
   border-radius: var(--radius);
   padding: 18px 20px;
   box-shadow: var(--shadow);
+  min-width: 0;
 }
 
 .cards-grid {
@@ -219,7 +220,7 @@ h3 { font-size: 0.95rem; }
 .bd-pct { color: var(--muted); font-size: 0.82rem; min-width: 56px; text-align: right; }
 
 /* ---------- Table ---------- */
-.table-wrap { overflow-x: auto; }
+.table-wrap { overflow-x: auto; max-width: 100%; }
 table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
 thead th {
   text-align: left;
