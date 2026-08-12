@@ -4,6 +4,8 @@ Read-only, dependency-free dashboard for tracking apartment renovation expenses.
 The single source of truth is [`renovation.json`](renovation.json). The dashboard
 **never modifies** the JSON — it is strictly a visualization layer.
 
+**Live dashboard:** https://berranremzi.github.io/home/
+
 ## Project structure
 
 ```
