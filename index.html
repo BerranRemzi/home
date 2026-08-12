@@ -47,9 +47,12 @@
     <section class="panel filters-panel" aria-label="Филтри">
       <div class="filters-header">
         <h2>Филтри</h2>
-        <button id="resetFilters" type="button" class="link-btn">Изчистване</button>
+        <div class="filters-actions">
+          <button id="resetFilters" type="button" class="link-btn">Изчистване</button>
+          <button id="filtersToggle" type="button" class="link-btn filters-toggle" aria-expanded="false" aria-controls="filtersGrid">Покажи ▾</button>
+        </div>
       </div>
-      <div class="filters-grid">
+      <div id="filtersGrid" class="filters-grid">
         <label class="field">
           <span>От дата</span>
           <input type="date" id="fFrom" data-filter="dateFrom">
@@ -110,7 +113,7 @@
     </section>
 
     <!-- Budget analysis -->
-    <section class="panel">
+    <section class="panel budget-analysis-section">
       <h2>Анализ на бюджета</h2>
       <div class="budget-grid">
         <div class="budget-row"><span>Бюджет</span><span id="baBudget">—</span></div>

@@ -572,6 +572,31 @@
     $("modalClose").addEventListener("click", closeModal);
     $("modalBackdrop").addEventListener("click", closeModal);
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+
+    // Collapsible filters (mobile)
+    var toggle = $("filtersToggle");
+    var grid = $("filtersGrid");
+    if (toggle && grid) {
+      // Collapse by default on small screens
+      function syncFiltersCollapsed() {
+        var mobile = window.matchMedia("(max-width: 640px)").matches;
+        if (mobile) {
+          grid.classList.add("hidden");
+          toggle.textContent = "Покажи ▾";
+          toggle.setAttribute("aria-expanded", "false");
+        } else {
+          grid.classList.remove("hidden");
+          toggle.style.display = "none";
+        }
+      }
+      syncFiltersCollapsed();
+      toggle.addEventListener("click", function () {
+        var hidden = grid.classList.toggle("hidden");
+        toggle.textContent = hidden ? "Покажи ▾" : "Скрий ▴";
+        toggle.setAttribute("aria-expanded", hidden ? "false" : "true");
+      });
+      window.addEventListener("resize", debounce(syncFiltersCollapsed, 200));
+    }
     window.addEventListener("resize", debounce(function () {
       // Re-render time chart to fit new width
       renderTimeChart($("chartTime"), monthlyTotals(filteredExpenses()));

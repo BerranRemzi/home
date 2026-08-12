@@ -344,18 +344,35 @@ td.desc { max-width: 320px; white-space: nowrap; overflow: hidden; text-overflow
   .charts-grid, .breakdown-grid { grid-template-columns: 1fr; }
 }
 
+/* Filters toggle: only visible on mobile */
+.filters-toggle { display: none; }
+.filters-actions { display: flex; gap: 12px; align-items: center; }
+
 @media (max-width: 640px) {
   .site-header { padding: 14px 14px 26px; }
   .header-inner { flex-direction: column; gap: 14px; }
   .header-totals { grid-template-columns: repeat(2, 1fr); width: 100%; }
   .header-stat { align-items: flex-start; }
   .container { padding: 16px 14px 36px; gap: 16px; }
-  /* Mobile priority order: spent, remaining, progress, recent expenses */
+
+  /* Show only spent + remaining cards on mobile */
   .cards-grid { grid-template-columns: 1fr 1fr; }
-  .card:first-child, .card:nth-child(2) { grid-column: span 1; }
+  .card:nth-child(n+3) { display: none; }
+
   .budget-grid { grid-template-columns: 1fr 1fr; }
   .filters-grid { grid-template-columns: 1fr 1fr; }
   .bar-row { grid-template-columns: 100px 1fr 80px; font-size: 0.82rem; }
   .sort-controls { flex-wrap: wrap; }
   .modal-body dl { grid-template-columns: 110px 1fr; }
+
+  /* Collapsible filters: toggle visible, grid hidden by default */
+  .filters-toggle { display: inline; }
+  .filters-grid.hidden { display: none; }
+
+  /* Hide redundant sections on mobile (duplicates of header + charts) */
+  .budget-analysis-section { display: none; }
+  .breakdown-grid { display: none; }
+
+  /* Time chart too dense for narrow screens */
+  .chart-panel-wide { display: none; }
 }
