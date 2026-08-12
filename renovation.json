@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "project": {
+    "name": "Реновация на апартамент",
+    "currency": "EUR",
+    "budget": 25000
+  },
+  "rooms": [
+    {
+      "id": "living_room",
+      "name": "Дневна"
+    },
+    {
+      "id": "kitchen",
+      "name": "Кухня"
+    },
+    {
+      "id": "bedroom",
+      "name": "Спалня"
+    },
+    {
+      "id": "kids_room",
+      "name": "Детска стая"
+    },
+    {
+      "id": "bathroom",
+      "name": "Баня"
+    },
+    {
+      "id": "hallway",
+      "name": "Коридор"
+    },
+    {
+      "id": "terrace",
+      "name": "Тераса"
+    }
+  ],
+  "categories": [
+    {
+      "id": "materials",
+      "name": "Материали"
+    },
+    {
+      "id": "labor",
+      "name": "Труд"
+    },
+    {
+      "id": "furniture",
+      "name": "Мебели"
+    },
+    {
+      "id": "appliances",
+      "name": "Уреди"
+    },
+    {
+      "id": "tools",
+      "name": "Инструменти"
+    },
+    {
+      "id": "transport",
+      "name": "Транспорт"
+    },
+    {
+      "id": "other",
+      "name": "Други"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "exp-001",
+      "date": "2026-08-10",
+      "thumbnail": "photos/exp-001.jpg",
+      "vendor": "baniastil.com",
+      "order_number": "#4010-2011-4476-3404",
+      "description": "Четка за тоалетна за вграждане Black Matt",
+      "category": "furniture",
+      "room": "bathroom",
+      "quantity": 1,
+      "amount": 172.05,
+      "currency": "EUR",
+      "status": "pending_approval",
+      "url": "https://baniastil.com/акесоари-за-баня/стенни-аксесоари-за-баня/четка-за-тоалетна-за-вграждане-black-matt-40188.html",
+      "notes": "7% отстъпка. Крайна цена с ДДС 172.05€ (≈336.49 лв.). Поръчана на 2026-08-10 02:14:16, чака одобрение от екип."
+    },
+    {
+      "id": "exp-002",
+      "date": "2026-08-12",
+      "thumbnail": "photos/exp-002.jpg",
+      "vendor": "baniastil.com",
+      "description": "Квадратен подов сифон за вграждане на плочка - Inox Style",
+      "category": "materials",
+      "room": "bathroom",
+      "quantity": 1,
+      "amount": 48.85,
+      "currency": "EUR",
+      "status": "pending_approval",
+      "url": "https://baniastil.com//index.php?a=details&product_id=31907",
+      "notes": "Подови лентови сифони. Ед. цена 48.85€ (95.54 лв.)."
+    },
+    {
+      "id": "exp-003",
+      "date": "2026-08-12",
+      "thumbnail": "photos/exp-003.jpg",
+      "vendor": "baniastil.com",
+      "description": "Структура за вграждане Rapid SL и тоалетна Bella Vortex 52см с биде - Grohe",
+      "category": "furniture",
+      "room": "bathroom",
+      "quantity": 1,
+      "amount": 415.00,
+      "currency": "EUR",
+      "status": "pending_approval",
+      "url": "https://baniastil.com//index.php?a=details&product_id=39910",
+      "notes": "Структури за вграждане. Ед. цена 415.00€ (811.67 лв.)."
+    },
+    {
+      "id": "exp-004",
+      "date": "2026-08-12",
+      "thumbnail": "photos/exp-004.jpg",
+      "vendor": "baniastil.com",
+      "description": "Термостатична душ колона ICT 6221B - Inter Ceramic SS (-17%)",
+      "category": "appliances",
+      "room": "bathroom",
+      "quantity": 1,
+      "amount": 119.42,
+      "currency": "EUR",
+      "status": "pending_approval",
+      "url": "https://baniastil.com//index.php?a=details&product_id=20339",
+      "notes": "Смесители за баня. 17% отстъпка. Ед. цена 119.42€. Поръчка общо 579.85€ (1,134.09 лв.) с отстъпка -3.42€."
+    },
+    {
+      "id": "exp-005",
+      "date": "2026-08-12",
+      "thumbnail": "photos/exp-005.jpg",
+      "vendor": "baniamechta.com",
+      "description": "Линеен сифон APZ115-850 alcadrain за вграждане на плочка",
+      "category": "materials",
+      "room": "bathroom",
+      "quantity": 1,
+      "amount": 269.40,
+      "currency": "EUR",
+      "status": "pending_approval",
+      "url": "https://baniamechta.com/lineen-sifon-alcadrain-apz115-marble-low-za-vgrazhdane-na-plochka/",
+      "notes": "Линейни сифони APZ115-850."
+    },
+    {
+      "id": "exp-006",
+      "date": "2026-08-12",
+      "vendor": "",
+      "description": "Освежаване на общи части",
+      "category": "labor",
+      "room": "hallway",
+      "quantity": 1,
+      "amount": 300.00,
+      "currency": "EUR",
+      "status": "pending_approval",
+      "notes": "Освежаване на общи части пред апартамента."
+    },
+    {
+      "id": "exp-007",
+      "date": "2026-08-12",
+      "vendor": "",
+      "description": "Ток за 2 месеца 11.08.2026 - 11.10.2026",
+      "category": "other",
+      "room": "hallway",
+      "quantity": 1,
+      "amount": 140.00,
+      "currency": "EUR",
+      "status": "pending_approval",
+      "notes": "Ток за 2 месеца 11.08.2026 - 11.10.2026 по време на реновацията."
+    }
+  ]
+}
