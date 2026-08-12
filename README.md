@@ -63,20 +63,8 @@ There is **no backend** and **no build step**.
 
 ## Deploy to GitHub Pages
 
-1. Push this folder to a GitHub repository.
-2. In **Settings → Pages**, choose the branch and `/home`
-   folder (or repo root if you push the contents there).
+1. Push the repository to GitHub (repo name: `home`).
+2. In **Settings → Pages → Build and deployment**, choose **Deploy from a
+   branch**, then select `main` and **root** (`/(root)`).
 3. The dashboard uses only relative paths, so it works as-is — no architectural
    changes needed.
-
-## Future extensions (not implemented now)
-
-The architecture is designed to make these easy to add later:
-
-- **Telegram → n8n → renovation.json**: an external automation appends
-  expenses to the JSON; the dashboard simply re-fetches it.
-- **GitHub repository → GitHub Pages → dashboard**: serve the repo as static
-  files.
-
-The dashboard is read-only on purpose. Expense editing will be added
-separately.
