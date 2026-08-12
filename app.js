@@ -74,6 +74,32 @@
   function roomName(id) { return LOOKUPS.rooms[id] || id || "—"; }
   function categoryName(id) { return LOOKUPS.categories[id] || id || "—"; }
 
+  // Derive thumbnail path from expense id (photos/exp-NNN.<ext>).
+  // Accepts an explicit e.thumbnail override, otherwise tries common extensions.
+  var THUMB_EXTS = ["jpg", "png", "jpeg", "webp", "gif"];
+  var _thumbCache = {};
+  function resolveThumbnail(e) {
+    if (e.thumbnail) return e.thumbnail;
+    if (!e.id) return "";
+    if (e.id in _thumbCache) return _thumbCache[e.id];
+    // Synchronous first guess: prefer .jpg (most common), fall back on image error.
+    return _thumbCache[e.id] = "photos/" + e.id + ".jpg";
+  }
+  // Attach an onerror handler that cycles through extensions for auto-thumbs.
+  function attachThumbFallback(img, id, isExplicit) {
+    if (isExplicit) return; // explicit thumbnail: no fallback
+    var idx = 0;
+    img.addEventListener("error", function handler() {
+      idx++;
+      if (idx >= THUMB_EXTS.length) {
+        img.removeEventListener("error", handler);
+        img.style.visibility = "hidden";
+        return;
+      }
+      img.src = "photos/" + id + "." + THUMB_EXTS[idx];
+    });
+  }
+
   // Normalize an expense: fill missing optional fields with safe defaults.
   function normalizeExpense(e, i) {
     if (!e || typeof e !== "object") return null;
@@ -90,9 +116,14 @@
     e.vendor = e.vendor || "";
     e.description = e.description || "";
     e.payment_method = e.payment_method || "";
-    e.receipt = e.receipt || "";
+    // attachments: array of paths/URLs. Back-compat with legacy `receipt` string.
+    if (Array.isArray(e.attachments)) e.attachments = e.attachments.slice();
+    else if (e.receipt) e.attachments = [e.receipt];
+    else e.attachments = [];
     e.notes = e.notes || "";
-    e.thumbnail = e.thumbnail || "";
+    var _explicitThumb = !!e.thumbnail;
+    e.thumbnail = resolveThumbnail(e);
+    if (_explicitThumb) e._explicitThumb = true;
     e.status = e.status || "";
     e.url = e.url || "";
     e.order_number = e.order_number || "";
@@ -415,6 +446,7 @@
         img.src = e.thumbnail;
         img.alt = e.description || "";
         img.loading = "lazy";
+        attachThumbFallback(img, e.id, !!(e._explicitThumb));
         thumbTd.appendChild(img);
       } else {
         thumbTd.appendChild(el("span", "thumb-placeholder", ""));
@@ -469,17 +501,26 @@
       var thumbImg = el("img", "modal-thumb");
       thumbImg.src = e.thumbnail;
       thumbImg.alt = e.description || "";
+      attachThumbFallback(thumbImg, e.id, !!(e._explicitThumb));
       dlRow("Снимка", thumbImg);
     }
 
-    if (e.receipt) {
-      var a = el("a");
-      a.href = e.receipt;
-      a.textContent = e.receipt;
-      a.target = "_blank";
-      dlRow("Касов бон", a);
+    // Attachments (invoices, receipts, warranties, etc.)
+    if (e.attachments.length) {
+      var attWrap = el("div", "attachments");
+      e.attachments.forEach(function (path) {
+        var a = el("a", "attachment-link");
+        a.href = path;
+        a.target = "_blank";
+        var ext = (path.split(".").pop() || "").toLowerCase();
+        var icon = el("span", "att-icon", ext === "pdf" ? "📄" : (/^(jpg|jpeg|png|webp|gif)$/.test(ext) ? "🖼" : "📎"));
+        a.appendChild(icon);
+        a.appendChild(document.createTextNode(" " + path.split("/").pop()));
+        attWrap.appendChild(a);
+      });
+      dlRow("Документи", attWrap);
     } else {
-      dlRow("Касов бон", "—");
+      dlRow("Документи", "—");
     }
     if (e.url) {
       var a2 = el("a");

@@ -261,6 +261,29 @@ td.desc { max-width: 320px; white-space: nowrap; overflow: hidden; text-overflow
   border: 1px solid var(--border);
   display: block;
 }
+.attachments {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.attachment-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.85rem;
+  width: fit-content;
+}
+.attachment-link:hover {
+  border-color: var(--accent);
+  background: var(--accent-weak);
+}
+.att-icon { font-size: 1rem; line-height: 1; }
 .status-pill {
   display: inline-block;
   padding: 2px 8px;
