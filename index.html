@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Реновация на апартамент — Разходи</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-title">
+        <h1 id="projectName">Реновация на апартамент</h1>
+        <p id="projectSub" class="muted">Зареждане…</p>
+      </div>
+      <div class="header-totals">
+        <div class="header-stat">
+          <span class="header-stat-label">Бюджет</span>
+          <span id="hdrBudget" class="header-stat-value">—</span>
+        </div>
+        <div class="header-stat">
+          <span class="header-stat-label">Похарчено</span>
+          <span id="hdrSpent" class="header-stat-value">—</span>
+        </div>
+        <div class="header-stat">
+          <span class="header-stat-label">Остава</span>
+          <span id="hdrRemaining" class="header-stat-value">—</span>
+        </div>
+        <div class="header-stat">
+          <span class="header-stat-label">Използвано</span>
+          <span id="hdrUsed" class="header-stat-value">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="progress-wrap" aria-label="Използване на бюджета">
+      <div id="progressBar" class="progress-bar" style="width:0%">
+        <span id="progressLabel" class="progress-label"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Error / empty banner -->
+    <section id="banner" class="banner hidden"></section>
+
+    <!-- Filters -->
+    <section class="panel filters-panel" aria-label="Филтри">
+      <div class="filters-header">
+        <h2>Филтри</h2>
+        <button id="resetFilters" type="button" class="link-btn">Изчистване</button>
+      </div>
+      <div class="filters-grid">
+        <label class="field">
+          <span>От дата</span>
+          <input type="date" id="fFrom" data-filter="dateFrom">
+        </label>
+        <label class="field">
+          <span>До дата</span>
+          <input type="date" id="fTo" data-filter="dateTo">
+        </label>
+        <label class="field">
+          <span>Категория</span>
+          <select id="fCategory" data-filter="category">
+            <option value="">Всички</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Стая</span>
+          <select id="fRoom" data-filter="room">
+            <option value="">Всички</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Доставчик</span>
+          <input type="text" id="fVendor" data-filter="vendor" placeholder="напр. baniastil.com">
+        </label>
+        <label class="field">
+          <span>Статус плащане</span>
+          <select id="fStatus" data-filter="status">
+            <option value="">Всички</option>
+            <option value="paid">Платени</option>
+            <option value="unpaid">Неплатени</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <!-- Summary cards -->
+    <section class="cards-grid" aria-label="Обобщение">
+      <article class="card">
+        <span class="card-label">Похарчено</span>
+        <span id="cardSpent" class="card-value">—</span>
+      </article>
+      <article class="card">
+        <span class="card-label">Оставащ бюджет</span>
+        <span id="cardRemaining" class="card-value">—</span>
+      </article>
+      <article class="card">
+        <span class="card-label">Брой разходи</span>
+        <span id="cardCount" class="card-value">—</span>
+      </article>
+      <article class="card">
+        <span class="card-label">Среден разход</span>
+        <span id="cardAvg" class="card-value">—</span>
+      </article>
+      <article class="card">
+        <span class="card-label">Най-голям разход</span>
+        <span id="cardLargest" class="card-value">—</span>
+      </article>
+    </section>
+
+    <!-- Budget analysis -->
+    <section class="panel">
+      <h2>Анализ на бюджета</h2>
+      <div class="budget-grid">
+        <div class="budget-row"><span>Бюджет</span><span id="baBudget">—</span></div>
+        <div class="budget-row"><span>Похарчено</span><span id="baSpent">—</span></div>
+        <div class="budget-row"><span>Остава</span><span id="baRemaining">—</span></div>
+        <div class="budget-row"><span>Използвано</span><span id="baUsed">—</span></div>
+      </div>
+      <h3 class="subsection-title">Разходи по категории спрямо общия бюджет</h3>
+      <div id="categoryBudgetBars" class="bars-list"></div>
+    </section>
+
+    <!-- Charts -->
+    <section class="charts-grid">
+      <article class="panel chart-panel">
+        <h2>По категория</h2>
+        <div id="chartCategory" class="bars-list"></div>
+      </article>
+      <article class="panel chart-panel">
+        <h2>По стая</h2>
+        <div id="chartRoom" class="bars-list"></div>
+      </article>
+      <article class="panel chart-panel chart-panel-wide">
+        <h2>Разходи във времето</h2>
+        <div id="chartTime" class="time-chart-wrap"></div>
+      </article>
+    </section>
+
+    <!-- Breakdown -->
+    <section class="breakdown-grid">
+      <article class="panel">
+        <h2>По категория</h2>
+        <div id="breakdownCategory" class="breakdown-list"></div>
+      </article>
+      <article class="panel">
+        <h2>По стая</h2>
+        <div id="breakdownRoom" class="breakdown-list"></div>
+      </article>
+    </section>
+
+    <!-- Recent expenses -->
+    <section class="panel">
+      <div class="filters-header">
+        <h2>Скорошни разходи</h2>
+        <div class="sort-controls">
+          <label for="sortBy">Сортирай по</label>
+          <select id="sortBy">
+            <option value="date">Дата</option>
+            <option value="amount">Сума</option>
+            <option value="category">Категория</option>
+            <option value="room">Стая</option>
+          </select>
+          <select id="sortDir">
+            <option value="desc">↓ Намален</option>
+            <option value="asc">↑ Възходящ</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table id="expensesTable">
+          <thead>
+            <tr>
+              <th class="thumb-col"></th>
+              <th>Дата</th>
+              <th>Описание</th>
+              <th>Доставчик</th>
+              <th>Стая</th>
+              <th>Категория</th>
+              <th class="num">Сума</th>
+            </tr>
+          </thead>
+          <tbody id="expensesBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Expense detail modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="modalTitle">Детайли за разход</h2>
+        <button id="modalClose" type="button" class="icon-btn" aria-label="Затвори">×</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer muted">
+    <span id="footerNote">Само за четене · Източник: renovation.json</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
