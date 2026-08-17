@@ -248,6 +248,7 @@
     {
       "id": "exp-013",
       "date": "2026-08-15",
+      "thumbnail": "photos/exp-013.jpg",
       "attachments": ["attachments/9E64A343-1928-4B3C-85C4-90D21C320BEB.jpeg"],
       "vendor": "Mr. Bricolage",
       "description": "Хидроизолация Ceresit CL51 5 kg",
@@ -258,11 +259,13 @@
       "amount": 27.60,
       "currency": "EUR",
       "status": "completed",
+      "url": "https://mr-bricolage.bg/hidroizolatsiya-ceresit-cl-kg/p/908794",
       "notes": "Хидроизолация Ceresit CL51, 5 kg. Покупка от Mr. Bricolage на 2026-08-15."
     },
     {
       "id": "exp-014",
       "date": "2026-08-15",
+      "thumbnail": "photos/exp-014.jpg",
       "attachments": ["attachments/9E64A343-1928-4B3C-85C4-90D21C320BEB.jpeg"],
       "vendor": "Mr. Bricolage",
       "description": "Прахосмукачка Kärcher WD3",
@@ -273,11 +276,13 @@
       "amount": 92.03,
       "currency": "EUR",
       "status": "completed",
+      "url": "https://mr-bricolage.bg/prahosmukachka-karcher-wd-p/p/990465",
       "notes": "Прахосмукачка Kärcher WD3. Покупка от Mr. Bricolage на 2026-08-15."
     },
     {
       "id": "exp-015",
       "date": "2026-08-15",
+      "thumbnail": "photos/exp-015.jpg",
       "attachments": ["attachments/9E64A343-1928-4B3C-85C4-90D21C320BEB.jpeg"],
       "vendor": "Mr. Bricolage",
       "description": "LED лампа A60 E27 75W Philips",
@@ -288,11 +293,13 @@
       "amount": 5.97,
       "currency": "EUR",
       "status": "completed",
+      "url": "https://mr-bricolage.bg/led-lampa-w-a-e-k-br/p/1018556",
       "notes": "LED лампа A60 E27 75W Philips. 3 бр. × 1,99 € = 5,97 €. Покупка от Mr. Bricolage на 2026-08-15."
     },
     {
       "id": "exp-016",
       "date": "2026-08-15",
+      "thumbnail": "photos/exp-016.jpg",
       "attachments": ["attachments/9E64A343-1928-4B3C-85C4-90D21C320BEB.jpeg"],
       "vendor": "Mr. Bricolage",
       "description": "Хидроизолационна лента CL152 10 m",
@@ -303,11 +310,13 @@
       "amount": 40.90,
       "currency": "EUR",
       "status": "completed",
+      "url": "https://mr-bricolage.bg/hidroizolatsionna-lenta-cl-m/p/956105",
       "notes": "Хидроизолационна лента Ceresit CL152, 10 m. 2 бр. × 20,45 € = 40,90 €. Покупка от Mr. Bricolage на 2026-08-15."
     },
     {
       "id": "exp-017",
       "date": "2026-08-15",
+      "thumbnail": "photos/exp-017.jpg",
       "attachments": ["attachments/9E64A343-1928-4B3C-85C4-90D21C320BEB.jpeg"],
       "vendor": "Mr. Bricolage",
       "description": "Шпакла 40 mm неръждаема стомана",
@@ -318,11 +327,13 @@
       "amount": 2.19,
       "currency": "EUR",
       "status": "completed",
+      "url": "https://mr-bricolage.bg/shpakla-mm-nerstomana/p/926191",
       "notes": "Шпакла 40 mm неръждаема стомана. Покупка от Mr. Bricolage на 2026-08-15."
     },
     {
       "id": "exp-018",
       "date": "2026-08-15",
+      "thumbnail": "photos/exp-018.jpg",
       "attachments": ["attachments/9E64A343-1928-4B3C-85C4-90D21C320BEB.jpeg"],
       "vendor": "Mr. Bricolage",
       "description": "Четка блок 17,5×8 см бук",
@@ -333,6 +344,7 @@
       "amount": 7.66,
       "currency": "EUR",
       "status": "completed",
+      "url": "https://mr-bricolage.bg/chetka-blok-h-sm-buk/p/1025422",
       "notes": "Четка блок 17,5×8 см бук. Покупка от Mr. Bricolage на 2026-08-15."
     },
     {
