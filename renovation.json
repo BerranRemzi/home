@@ -78,7 +78,7 @@
       "quantity": 1,
       "amount": 172.05,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "url": "https://baniastil.com/акесоари-за-баня/стенни-аксесоари-за-баня/четка-за-тоалетна-за-вграждане-black-matt-40188.html",
       "notes": "7% отстъпка. Крайна цена с ДДС 172.05€ (≈336.49 лв.). Поръчана на 2026-08-10 02:14:16, чака одобрение от екип."
     },
@@ -93,7 +93,7 @@
       "quantity": 1,
       "amount": 48.85,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "url": "https://baniastil.com//index.php?a=details&product_id=31907",
       "notes": "Подови лентови сифони. Ед. цена 48.85€ (95.54 лв.)."
     },
@@ -108,7 +108,7 @@
       "quantity": 1,
       "amount": 415.00,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "url": "https://baniastil.com//index.php?a=details&product_id=39910",
       "notes": "Структури за вграждане. Ед. цена 415.00€ (811.67 лв.)."
     },
@@ -123,7 +123,7 @@
       "quantity": 1,
       "amount": 119.42,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "url": "https://baniastil.com//index.php?a=details&product_id=20339",
       "notes": "Смесители за баня. 17% отстъпка. Ед. цена 119.42€. Поръчка общо 579.85€ (1,134.09 лв.) с отстъпка -3.42€."
     },
@@ -138,7 +138,7 @@
       "quantity": 1,
       "amount": 269.40,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "url": "https://baniamechta.com/lineen-sifon-alcadrain-apz115-marble-low-za-vgrazhdane-na-plochka/",
       "notes": "Линейни сифони APZ115-850."
     },
@@ -152,7 +152,7 @@
       "quantity": 1,
       "amount": 300.00,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "notes": "Освежаване на общи части пред апартамента."
     },
     {
@@ -165,7 +165,7 @@
       "quantity": 1,
       "amount": 140.00,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "notes": "Ток за 2 месеца 11.08.2026 - 11.10.2026 по време на реновацията."
     },
     {
@@ -181,7 +181,7 @@
       "unit_price": 33.00,
       "amount": 427.68,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "notes": "Грес керамична плочка Bergstein Pearl, размер 60×60 см. 12,96 м² × 33,00 €/м² = 427,68 €."
     },
     {
@@ -197,7 +197,7 @@
       "unit_price": 33.00,
       "amount": 712.80,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "notes": "Грес керамична плочка Bergstein Light, размер 60×60 см. 21,60 м² × 33,00 €/м² = 712,80 €."
     },
     {
@@ -213,7 +213,7 @@
       "unit_price": 20.40,
       "amount": 102.00,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "notes": "Дървовидна плочка Wood Essence Nature, размер 15,5×62 см. 5,00 м² × 20,40 €/м² = 102,00 €."
     },
     {
@@ -227,7 +227,7 @@
       "quantity": 1,
       "amount": 807.00,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "url": "https://triano.bg/p/dolen-shkaf-za-banya-smile",
       "notes": "Долен шкаф за баня Смайл от 100% водоустойчиво PVC. Две чекмеджета с плавно затваряне. Порцеланова мивка Geberit. Размери: Ш 800 / В 420 / Д 420 мм. Цена 807,00 € (вкл. мивка, без смесител и сифон). 3 години гаранция. Безплатна доставка над 130 €. Цена диапазон 598,00–807,00 € според изпълнение."
     },
@@ -241,9 +241,121 @@
       "quantity": 1,
       "amount": 104.16,
       "currency": "EUR",
-      "status": "pending_approval",
+      "status": "completed",
       "url": "https://www.emag.bg/nisha-za-dush-luxebath-neryzhdaema-stomana-cherna-vgradena-dush-postavka-lesna-za-pochistvane-490010465/pd/DJ3H2DYBM/",
       "notes": "Ниша за душ LuxeBath, неръждаема стомана, прахово боядисана в черно (мат). Изпъкнала рамка, дължина 300 мм, обща дължина 320 мм. 30×30 см. Вградена душ поставка, лесна за почистване. Устойчива на ръжда и водоустойчива. 104,16 € (203,72 лв.). 1 бр. 24 месеца гаранция. Доставка от ERIS CAR DESIGN GmbH."
+    },
+    {
+      "id": "exp-013",
+      "date": "2026-08-15",
+      "vendor": "Mr. Bricolage",
+      "description": "Хидроизолация Ceresit CL51 5 kg",
+      "category": "materials",
+      "room": "bathroom",
+      "quantity": 1,
+      "unit_price": 27.60,
+      "amount": 27.60,
+      "currency": "EUR",
+      "status": "completed",
+      "notes": "Хидроизолация Ceresit CL51, 5 kg. Покупка от Mr. Bricolage на 2026-08-15."
+    },
+    {
+      "id": "exp-014",
+      "date": "2026-08-15",
+      "vendor": "Mr. Bricolage",
+      "description": "Прахосмукачка Kärcher WD3",
+      "category": "appliances",
+      "room": "",
+      "quantity": 1,
+      "unit_price": 92.03,
+      "amount": 92.03,
+      "currency": "EUR",
+      "status": "completed",
+      "notes": "Прахосмукачка Kärcher WD3. Покупка от Mr. Bricolage на 2026-08-15."
+    },
+    {
+      "id": "exp-015",
+      "date": "2026-08-15",
+      "vendor": "Mr. Bricolage",
+      "description": "LED лампа A60 E27 75W Philips",
+      "category": "materials",
+      "room": "",
+      "quantity": 3,
+      "unit_price": 1.99,
+      "amount": 5.97,
+      "currency": "EUR",
+      "status": "completed",
+      "notes": "LED лампа A60 E27 75W Philips. 3 бр. × 1,99 € = 5,97 €. Покупка от Mr. Bricolage на 2026-08-15."
+    },
+    {
+      "id": "exp-016",
+      "date": "2026-08-15",
+      "vendor": "Mr. Bricolage",
+      "description": "Хидроизолационна лента CL152 10 m",
+      "category": "materials",
+      "room": "bathroom",
+      "quantity": 2,
+      "unit_price": 20.45,
+      "amount": 40.90,
+      "currency": "EUR",
+      "status": "completed",
+      "notes": "Хидроизолационна лента Ceresit CL152, 10 m. 2 бр. × 20,45 € = 40,90 €. Покупка от Mr. Bricolage на 2026-08-15."
+    },
+    {
+      "id": "exp-017",
+      "date": "2026-08-15",
+      "vendor": "Mr. Bricolage",
+      "description": "Шпакла 40 mm неръждаема стомана",
+      "category": "tools",
+      "room": "",
+      "quantity": 1,
+      "unit_price": 2.19,
+      "amount": 2.19,
+      "currency": "EUR",
+      "status": "completed",
+      "notes": "Шпакла 40 mm неръждаема стомана. Покупка от Mr. Bricolage на 2026-08-15."
+    },
+    {
+      "id": "exp-018",
+      "date": "2026-08-15",
+      "vendor": "Mr. Bricolage",
+      "description": "Четка блок 17,5×8 см бук",
+      "category": "tools",
+      "room": "",
+      "quantity": 1,
+      "unit_price": 7.66,
+      "amount": 7.66,
+      "currency": "EUR",
+      "status": "completed",
+      "notes": "Четка блок 17,5×8 см бук. Покупка от Mr. Bricolage на 2026-08-15."
+    },
+    {
+      "id": "exp-019",
+      "date": "2026-08-15",
+      "vendor": "Mr. Bricolage",
+      "description": "Филтърни торбички Kärcher WD2 Plus / WD3",
+      "category": "appliances",
+      "room": "",
+      "quantity": 1,
+      "unit_price": 13.29,
+      "amount": 13.29,
+      "currency": "EUR",
+      "status": "completed",
+      "notes": "Филтърни торбички Kärcher WD2 Plus / WD3. Консуматив за прахосмукачката. Покупка от Mr. Bricolage на 2026-08-15."
+    },
+    {
+      "id": "exp-020",
+      "date": "2026-08-15",
+      "vendor": "Mr. Bricolage",
+      "description": "Макара с кабел 20 m IP44",
+      "category": "materials",
+      "room": "",
+      "quantity": 1,
+      "unit_price": 40.90,
+      "amount": 40.90,
+      "currency": "EUR",
+      "status": "completed",
+      "notes": "Макара с кабел 20 m IP44. Покупка от Mr. Bricolage на 2026-08-15."
     }
   ]
 }
